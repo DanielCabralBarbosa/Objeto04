@@ -20,15 +20,13 @@ void CSMain (uint3 id : SV_DispatchThreadID)
 {
    Cube cube = cubes[id.x];
 
-   for (int = 0; i < interaction, i++) {
+   for (int i = 0; i < interaction; i++) {
       float _r = rand(float2(cube.color.r, cube.color.g));
 	  float _g = rand(float2(cube.color.g, cube.color.b));
 	  float _b = rand(float2(cube.color.r, cube.color.b));
 
 	  cube.color = float4(_r, _g, _b, 1.0f);
 
-	 
-   
    }
 
     cubes[id.x] = cube;

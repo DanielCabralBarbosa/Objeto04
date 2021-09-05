@@ -68,7 +68,7 @@ public class randColorCS : MonoBehaviour
                 computeShader.SetBuffer(0, "cubes", computeBuffer);
                 computeShader.SetInt("interaction", interactions);
 
-                computeShader.Dispatch(1, data.Length / 10, 1, 1);
+                computeShader.Dispatch(0, data.Length / 10, 1, 1);
 
                 computeBuffer.GetData(data);
 
