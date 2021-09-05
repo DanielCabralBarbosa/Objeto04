@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class randColorCS : MonoBehaviour
+
+    int minMass = 1;
+    int maxMass = 100;
 {
 
     struct Cube
@@ -21,7 +24,7 @@ public class randColorCS : MonoBehaviour
  
     void Start()
     {
-        
+        this.GetComponent<Rigidbody>().mass = Random.Range(minMass, maxMass);
     }
 
     
