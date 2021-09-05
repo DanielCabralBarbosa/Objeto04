@@ -1,12 +1,4 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
-Cmd: compileComputeKernel
-  insize=658 file=C:/Users/GABRIEL/Documents/GitHub/Objeto04/Assets/colorRandom.compute kernel=CSMain cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=5 km=<UNITY_VERSION=202038> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0  error: 2 plat 4 at colorRandom.compute(23): syntax error: unexpected token ')'
-  error: 2 plat 4 at colorRandom.compute(28): undeclared identifier '_r'
- ok=0 outsize=0
-
-Cmd: compileComputeKernel
-  insize=661 file=C:/Users/GABRIEL/Documents/GitHub/Objeto04/Assets/colorRandom.compute kernel=CSMain cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=5 km=<UNITY_VERSION=202038> pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=SHADER_STAGE_COMPUTE platform=d3d11 flags=0 ok=1 outsize=951
-
 Cmd: shutdown
