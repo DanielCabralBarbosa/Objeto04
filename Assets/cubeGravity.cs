@@ -6,7 +6,7 @@ public class cubeGravity : MonoBehaviour
 {
 
     int minMass = 1;
-    int maxMass = 8;
+    int maxMass = 100;
 
 
     // Start is called before the first frame update
