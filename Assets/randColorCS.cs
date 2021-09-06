@@ -108,4 +108,9 @@ public class randColorCS : MonoBehaviour
             }
         }
     }
+
+    public void colorRandomizer(GameObject cube)
+    {
+        //Usar para trocar somente a cor do cubo passado
+    }
 }

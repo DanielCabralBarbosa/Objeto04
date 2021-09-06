@@ -5,24 +5,54 @@ using UnityEngine;
 public class cubeGravity : MonoBehaviour
 {
 
-    public int minMass = 0;
-    public int maxMass = 1;
-    public int minSpeed = 1;
-    public int maxSpeed = 2;
-    int speed;
-    int force = 1;
-  
+    public float minMass = 1;
+    public float maxMass = 10;
+    float mass;
+    public float minSpeed = 1;
+    public float maxSpeed = 2;
+    float curSpeed;
+    float iniSpeed;
+    float force = 10;
+    float t0;
+    float dt;
+    Vector3 iniPosition;
+    bool isColliding = false;
+    float floorPosition;
+    float cubeMiddle;
+    randColorCS rand;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<Rigidbody>().mass = Random.Range(minMass, maxMass);
-        this.speed = Random.Range(minSpeed, maxSpeed);
+        iniPosition = this.transform.position;
+        mass = Random.Range(minMass, maxMass);
+        //this.GetComponent<Rigidbody>().mass = Random.Range(minMass, maxMass);
+        this.iniSpeed = Random.Range(minSpeed, maxSpeed);
+        curSpeed = iniSpeed;
+        t0 = Time.realtimeSinceStartup;
+        GameObject floor = GameObject.FindGameObjectWithTag("Floor");
+        rand = GameObject.FindGameObjectWithTag("colorManager").GetComponent<randColorCS>();
+        floorPosition = floor.GetComponent<MeshFilter>().mesh.bounds.extents.y * floor.transform.localScale.y + floor.transform.position.y;
+        cubeMiddle = this.GetComponent<MeshFilter>().mesh.bounds.extents.y * this.transform.localScale.y;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (isColliding == false)
+        {
+            dt = Time.realtimeSinceStartup - t0;
+            curSpeed = iniSpeed + ((force / mass) * dt);
+            float newPosition = -curSpeed * dt;
+            if(newPosition < floorPosition + cubeMiddle)
+            {
+                newPosition = floorPosition + cubeMiddle;
+                isColliding = true;
+                rand.colorRandomizer(this.gameObject);
+
+            }
+            this.transform.position = iniPosition + new Vector3(0, newPosition);
+
+        }
     }
 }
