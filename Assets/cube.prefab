@@ -108,10 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76107aada9fa4eb982928115d4fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minMass: 1
-  maxMass: 9
-  minSpeed: 2
-  maxSpeed: 15
-  curSpeed: 0
-  t0: 0
-  dt: 0
+  minMass: 20
+  maxMass: 30
+  minSpeed: 10
+  maxSpeed: 25

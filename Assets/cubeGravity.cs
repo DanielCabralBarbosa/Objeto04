@@ -5,11 +5,11 @@ using UnityEngine;
 public class cubeGravity : MonoBehaviour
 {
 
-    public float minMass = 1;
-    public float maxMass = 10;
+    public float minMass;
+    public float maxMass;
     float mass;
-    public float minSpeed = 1;
-    public float maxSpeed = 2;
+    public float minSpeed;
+    public float maxSpeed;
     float curSpeed;
     float iniSpeed;
     float force = 10;

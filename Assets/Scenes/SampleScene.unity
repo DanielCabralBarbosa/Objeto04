@@ -442,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   computeShader: {fileID: 7200000, guid: a6e9f4e35e910ea4cb331a8507352442, type: 3}
   interactions: 50
-  count: 26
+  count: 10
   modelPref: {fileID: 6418681026293047365, guid: 3635c2cbe1045704fb60dbd45746f254, type: 3}
 --- !u!4 &1097845643
 Transform:

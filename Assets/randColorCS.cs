@@ -112,5 +112,21 @@ public class randColorCS : MonoBehaviour
     public void colorRandomizer(GameObject cube)
     {
         //Usar para trocar somente a cor do cubo passado
+        int totalSize = 4 * sizeof(float) + 3 * sizeof(float);
+
+        ComputeBuffer computeBuffer = new ComputeBuffer(data.Length, totalSize);
+        computeBuffer.SetData(data);
+
+        computeShader.SetBuffer(0, "cubes", computeBuffer);
+        computeShader.SetInt("interaction", interactions);
+
+        computeShader.Dispatch(0, data.Length / 10, 1, 1);
+
+        computeBuffer.GetData(data);
+
+        cube.GetComponent<MeshRenderer>().material.SetColor("_Color", data[0].color);
+        
+
+        computeBuffer.Dispose();
     }
 }
