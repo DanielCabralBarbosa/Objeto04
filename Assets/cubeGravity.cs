@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class cubeGravity : MonoBehaviour
 {
-
     public float minMass;
     public float maxMass;
+    [SerializeField]
     float mass;
     public float minSpeed;
     public float maxSpeed;
     float curSpeed;
+    [SerializeField]
     float iniSpeed;
     float force = 10;
     float t0;
